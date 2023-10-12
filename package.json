@@ -1,5 +1,5 @@
 {
-  "name": "spotify-embed",
+  "name": "spotify-embed-react",
   "version": "1.0.0",
   "description": "A straightforward React component for seamlessly embedding Spotify song or album previews into your web applications.",
   "main": "SpotifyEmbed.js",
