@@ -21,6 +21,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "your-git-repo-url"
+    "url": "git+https://github.com/krutk/spotify-embed.git"
   }
 }
