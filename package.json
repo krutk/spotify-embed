@@ -1,6 +1,6 @@
 {
   "name": "spotify-embed-react",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A straightforward React component for seamlessly embedding Spotify song or album previews into your web applications.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -11,21 +11,19 @@
   },
   "exports": {
     "./package.json": "./package.json",
-    ".": "./src/index.js",
-    "./*": "./src/components/*/index.js"
+    ".": {
+      "import": "./src/index.ts"
+    },
+    "./*": {
+      "import": "./src/components/*/index.ts"
+    }
   },
   "scripts": {
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs"
   },
-  "keywords": [
-    "react",
-    "spotify",
-    "embed",
-    "widget",
-    "nextjs"
-  ],
+  "keywords": ["react", "spotify", "embed", "widget", "nextjs"],
   "author": "Kumar Utkarsh",
   "license": "MIT",
   "devDependencies": {
