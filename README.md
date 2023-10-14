@@ -25,12 +25,12 @@ import {Spotify} from 'spotify-embed-react';
 
 **Demo: Normal playlist/song/album link, and with alternate theme**
 
-<img width="400px" height="auto" src="https://github.com/krutk/spotify-embed/raw/master/public/Screenshot1.png">
-<img width="400px" height="auto" src="https://github.com/krutk/spotify-embed/raw/master/public/Screenshot2.png">
-<img width="400px" height="auto" src="https://github.com/krutk/spotify-embed/raw/master/public/Screenshot3.png">
-<img width="400px" height="auto" src="https://github.com/krutk/spotify-embed/raw/master/public/Screenshot4.png">
-<img width="400px" height="auto" src="https://github.com/krutk/spotify-embed/raw/master/public/Screenshot5.png">
-<img width="400px" height="auto" src="https://github.com/krutk/spotify-embed/raw/master/public/Screenshot6.png">
+<img width="400px" height="auto" src="https://ibb.co/cYtLVKr">
+<img width="400px" height="auto" src="https://ibb.co/X5Hk8c3">
+<img width="400px" height="auto" src="https://ibb.co/T2CJXsg">
+<img width="400px" height="auto" src="https://ibb.co/X4j50DV">
+<img width="400px" height="auto" src="https://ibb.co/64VbKXy">
+<img width="400px" height="auto" src="https://ibb.co/ZgW5bjx">
 
 ### Example
 
