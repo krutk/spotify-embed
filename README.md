@@ -24,13 +24,18 @@ import {Spotify} from 'spotify-embed-react';
 ```
 
 **Demo: Normal playlist/song/album link, and with alternate theme**
-
-<img width="400px" height="auto" src="https://ibb.co/cYtLVKr">
+<a href="https://ibb.co/cYtLVKr"><img src="https://i.ibb.co/J32QgWs/Screenshot-from-2023-10-15-02-03-48.png" alt="Screenshot-from-2023-10-15-02-03-48" border="0"></a>
+<a href="https://ibb.co/X5Hk8c3"><img src="https://i.ibb.co/095VtHF/Screenshot-from-2023-10-15-02-05-00.png" alt="Screenshot-from-2023-10-15-02-05-00" border="0"></a>
+<a href="https://ibb.co/T2CJXsg"><img src="https://i.ibb.co/r0WqPVw/Screenshot-from-2023-10-15-02-06-36.png" alt="Screenshot-from-2023-10-15-02-06-36" border="0"></a>
+<a href="https://ibb.co/X4j50DV"><img src="https://i.ibb.co/1n7XyMb/Screenshot-from-2023-10-15-02-18-33.png" alt="Screenshot-from-2023-10-15-02-18-33" border="0"></a>
+<a href="https://ibb.co/64VbKXy"><img src="https://i.ibb.co/fCBt3DX/Screenshot-from-2023-10-15-02-19-05.png" alt="Screenshot-from-2023-10-15-02-19-05" border="0"></a>
+<a href="https://ibb.co/ZgW5bjx"><img src="https://i.ibb.co/T0m6Nft/Screenshot-from-2023-10-15-02-19-32.png" alt="Screenshot-from-2023-10-15-02-19-32" border="0"></a>
+<!-- <img width="400px" height="auto" src="https://ibb.co/cYtLVKr">
 <img width="400px" height="auto" src="https://ibb.co/X5Hk8c3">
 <img width="400px" height="auto" src="https://ibb.co/T2CJXsg">
 <img width="400px" height="auto" src="https://ibb.co/X4j50DV">
 <img width="400px" height="auto" src="https://ibb.co/64VbKXy">
-<img width="400px" height="auto" src="https://ibb.co/ZgW5bjx">
+<img width="400px" height="auto" src="https://ibb.co/ZgW5bjx"> -->
 
 ### Example
 
