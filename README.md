@@ -2,7 +2,7 @@
 
 [NPM](https://www.npmjs.com/package/spotify-embed-react) 
 
-[Currently not working in nextjs]
+### Currently working in React
 Use this component to create a Spotify embed for a given Spotify link. In
 Spotify, click ••• > Copy Link, and paste it in the `<Spotify url={...}>` prop.
 
@@ -30,14 +30,3 @@ import {Spotify} from 'spotify-embed-react';
 <a href="https://ibb.co/X4j50DV"><img src="https://i.ibb.co/1n7XyMb/Screenshot-from-2023-10-15-02-18-33.png" alt="Screenshot-from-2023-10-15-02-18-33" border="0"></a>
 <a href="https://ibb.co/64VbKXy"><img src="https://i.ibb.co/fCBt3DX/Screenshot-from-2023-10-15-02-19-05.png" alt="Screenshot-from-2023-10-15-02-19-05" border="0"></a>
 <a href="https://ibb.co/ZgW5bjx"><img src="https://i.ibb.co/T0m6Nft/Screenshot-from-2023-10-15-02-19-32.png" alt="Screenshot-from-2023-10-15-02-19-32" border="0"></a>
-<!-- <img width="400px" height="auto" src="https://ibb.co/cYtLVKr">
-<img width="400px" height="auto" src="https://ibb.co/X5Hk8c3">
-<img width="400px" height="auto" src="https://ibb.co/T2CJXsg">
-<img width="400px" height="auto" src="https://ibb.co/X4j50DV">
-<img width="400px" height="auto" src="https://ibb.co/64VbKXy">
-<img width="400px" height="auto" src="https://ibb.co/ZgW5bjx"> -->
-
-### Example
-
-This repository itself is a Next project demonstrating the use of this
-component.
