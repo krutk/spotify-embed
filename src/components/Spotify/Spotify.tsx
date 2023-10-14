@@ -3,7 +3,7 @@ import React from "react";
 type Props = {
   key: string;
   url: string;
-  bordeRRadius?: number;
+  borderRadius?: string;
   width?: number | string;
   height?: number | string;
   alternateTheme?: string;
@@ -11,7 +11,7 @@ type Props = {
 
 const Spotify: React.FC<Props> = ({
   url,
-  bordeRRadius,
+  borderRadius,
   width,
   height,
   alternateTheme,
@@ -21,7 +21,7 @@ const Spotify: React.FC<Props> = ({
   const themeQueryParam = alternateTheme ? "?theme=0" : "";
   return (
     <iframe
-      style={{ borderRadius: bordeRRadius ? bordeRRadius.toString() : "12px" }}
+      style={{ borderRadius: borderRadius ? borderRadius : "12px" }}
       src={`https://open.spotify.com/embed/${id}${themeQueryParam}`}
       width={
         width === "wide"
