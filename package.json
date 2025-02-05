@@ -1,27 +1,30 @@
 {
   "name": "spotify-embed-react",
-  "version": "2.0",
+  "version": "2.0.1",
   "description": "A straightforward React component for seamlessly embedding Spotify song or album previews into your web applications.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/krutk/spotify-embed.git"
   },
   "exports": {
-    "./package.json": "./package.json",
     ".": {
-      "import": "./src/index.ts"
-    },
-    "./*": {
-      "import": "./src/components/*/index.ts"
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts"
     }
   },
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs"
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prepare": "npm run build"
   },
   "keywords": ["react", "spotify", "embed", "widget", "nextjs"],
   "author": "Kumar Utkarsh",
@@ -35,6 +38,7 @@
     "@types/react-dom": "^18.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
     "tslib": "^2.6.2",
     "typescript": "^4.9.5",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
