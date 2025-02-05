@@ -1,43 +1,79 @@
 import React from "react";
 
-type Props = {
-  key: string;
+export interface SpotifyEmbedProps {
+  /** Spotify URL for the content to embed */
   url: string;
+  /** Custom border radius for the embed (e.g., "12px", "1rem") */
   borderRadius?: string;
-  width?: number | string;
-  height?: number | string;
-  alternateTheme?: string;
-};
+  /** Width of the embed - can be a number (px), string (CSS value), or preset ("wide" | "compact") */
+  width?: number | string | "wide" | "compact";
+  /** Height of the embed - can be a number (px), string (CSS value), or preset ("compact") */
+  height?: number | string | "compact";
+  /** Enable alternate (light) theme */
+  theme?: "dark" | "light";
+  /** Allow transparency in the embed */
+  transparent?: boolean;
+  /** Custom CSS class name */
+  className?: string;
+  /** Custom inline styles */
+  style?: React.CSSProperties;
+}
 
-const Spotify: React.FC<Props> = ({
+const SpotifyEmbed: React.FC<SpotifyEmbedProps> = ({
   url,
-  borderRadius,
-  width,
-  height,
-  alternateTheme,
+  borderRadius = "12px",
+  width = "100%",
+  height = "352",
+  theme = "dark",
+  transparent = false,
+  className,
+  style,
 }) => {
-  const match = url.match(/(album|track|episode|playlist)\/(\w+)/);
-  const id = match?.[1] + "/" + match?.[2];
-  const themeQueryParam = alternateTheme ? "?theme=0" : "";
+  const match = url.match(/(album|track|episode|playlist|artist)\/([a-zA-Z0-9]+)/);
+  
+  if (!match) {
+    console.warn("Invalid Spotify URL provided");
+    return null;
+  }
+
+  const [, type, id] = match;
+  const embedUrl = new URL(`https://open.spotify.com/embed/${type}/${id}`);
+  
+  if (theme === "light") {
+    embedUrl.searchParams.set("theme", "0");
+  }
+  
+  if (transparent) {
+    embedUrl.searchParams.set("transparent", "1");
+  }
+
+  const getWidth = () => {
+    if (width === "wide") return "100%";
+    if (width === "compact") return "40%";
+    return width;
+  };
+
+  const getHeight = () => {
+    if (height === "compact") return "152";
+    return height;
+  };
+
   return (
     <iframe
-      style={{ borderRadius: borderRadius ? borderRadius : "12px" }}
-      src={`https://open.spotify.com/embed/${id}${themeQueryParam}`}
-      width={
-        width === "wide"
-          ? "100%"
-          : width === "compact"
-          ? "40%"
-          : !width
-          ? "100%"
-          : width
-      }
-      height={height === "compact" ? "152" : !height ? "352" : height}
+      className={className}
+      style={{
+        borderRadius,
+        border: 0,
+        ...style,
+      }}
+      src={embedUrl.toString()}
+      width={getWidth()}
+      height={getHeight()}
       allowFullScreen
-      allow="encrypted-media"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
-    ></iframe>
+    />
   );
 };
 
-export default Spotify;
+export default SpotifyEmbed;
